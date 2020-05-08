@@ -39,14 +39,14 @@ describe('Hobbit', function() {
     };
   };
 
-  it.skip('should be considered a child at the age of 32', function() {
+  it('should be considered a child at the age of 32', function() {
     const hobbit = new Hobbit('Taylor');
-    timeTravel(32, hobbit);
+    timeTravel(32, hobbit); // 1
     assert.equal(hobbit.age, 32);
     assert.equal(hobbit.adult, false);
   });
 
-  it.skip('should be considered an adult at 33', function() {
+  it('should be considered an adult at 33', function() {
     const hobbit = new Hobbit('Taylor');
     timeTravel(33, hobbit);
     assert.equal(hobbit.age, 33);
@@ -60,7 +60,7 @@ describe('Hobbit', function() {
 
   it('should be considered old at the age of 101', function() {
     const hobbit = new Hobbit('Samwise');
-    assert.equal(hobbit.old, false)
+    assert.equal(hobbit.old, false) //
 
     timeTravel(100, hobbit);
     assert.equal(hobbit.old, false)
@@ -69,7 +69,7 @@ describe('Hobbit', function() {
     assert.equal(hobbit.old, true)
   });
 
-  it.skip('should have the ring if its name is Frodo', function() {
+  it('should have the ring if its name is Frodo', function() {
     const hobbit1 = new Hobbit('Frodo');
     const hobbit2 = new Hobbit('Samwise');
 
